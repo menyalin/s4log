@@ -1,7 +1,7 @@
 {
-  "name": "s4log",
+  "name": "truckIdleNotificationService",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/s4log/src",
+  "sourceRoot": "apps/truckIdleNotificationService/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -11,12 +11,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/s4log",
-        "main": "apps/s4log/src/main.ts",
-        "tsConfig": "apps/s4log/tsconfig.app.json",
-        "assets": ["apps/s4log/src/assets"],
+        "outputPath": "dist/apps/truckIdleNotificationService",
+        "main": "apps/truckIdleNotificationService/src/main.ts",
+        "tsConfig": "apps/truckIdleNotificationService/tsconfig.app.json",
+        "assets": ["apps/truckIdleNotificationService/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/s4log/webpack.config.js"
+        "webpackConfig": "apps/truckIdleNotificationService/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -27,14 +27,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "s4log:build"
+        "buildTarget": "truckIdleNotificationService:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "s4log:build:development"
+          "buildTarget": "truckIdleNotificationService:build:development"
         },
         "production": {
-          "buildTarget": "s4log:build:production"
+          "buildTarget": "truckIdleNotificationService:build:production"
         }
       }
     },
@@ -42,14 +42,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/s4log/**/*.ts"]
+        "lintFilePatterns": ["apps/truckIdleNotificationService/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/s4log/jest.config.ts",
+        "jestConfig": "apps/truckIdleNotificationService/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
